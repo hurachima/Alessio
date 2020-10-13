@@ -1,0 +1,383 @@
+body{
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	background: url(../img/fon.jpg);
+	background-size: 100%;
+	background-position: 0 -100px;
+	background-attachment: fixed;
+}
+div.menu{
+	background: black;
+	position: fixed;
+	width: 100%;
+	padding: 0 10%;
+	left:0;
+	top: 3px;
+	z-index: 10; 
+}
+div.line{
+	display: block;
+	background: gold;
+	position: fixed;
+	width: 100%;
+	height: 3px;
+	left: 0;
+	top: 0;
+	z-index: 10;
+
+}
+div.menu a,div.about a, div.experience a,div.contacts a{
+	color:white;
+	display: inline-block;
+	text-decoration: none;
+	margin: 20px 50px;
+	margin-left: 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: uppercase;
+
+}
+div.contacts a{
+	margin: 20px 10px;
+}
+div.menu a::after, div.about a::after, div.experience a::after,
+div.contacts a::after{
+	content: "";
+	display: block;
+	background: gold;
+	width: 100%;
+	height: 3px;
+	transform: scale(0, 1);
+	transition-duration: .5s;
+	transform-origin: left top; 
+}
+div.menu a:hover::after, div.about a:hover::after, 
+div.experience a:hover::after,div.contacts a:hover::after{
+	transform: scale(1);
+}
+h1{
+	color: white;
+	text-align: center;
+	padding: 20% 0;
+	font-size: 2.5em;
+	text-transform: uppercase;
+
+}
+h1 span{
+	font-size: .8em;
+}
+div.about,div.experience,div.what,div.contacts,div.message{
+	background: white;
+	padding: 100px 5%;
+	overflow: hidden;
+	clear: both;
+}
+div.h2{
+	text-align: center;
+	margin-bottom: 50px;
+}
+h2{
+	border-bottom: 4px solid gold;
+	display: inline;
+}
+div.about img{
+	float: left;
+	width: 20%;
+	margin-right: 5%;
+}
+div.about p{
+	color: grey;
+	text-transform: uppercase;
+	font-size: .9em;
+}
+div.about a,div.contacts a{
+	color: gold;
+	display: inline-block;
+	font-size: 1em;
+}
+div.experience div.box{
+	position: relative;
+	width: 49%;
+	margin-bottom: 20px;
+
+}
+div.experience div.box img{
+	width: 100%;
+	overflow: hidden;
+
+}
+div.experience div.left{
+	float: left;
+
+}
+div.experience div.right{
+	float: right;
+}
+div.experience div.box h3{
+	position: absolute;
+	left: 0;
+	top: 35%;
+	text-align: center;
+	width: 100%;
+	font-size: 1.2em;
+	color: white;
+	opacity: 0;
+	transition-duration: .3s;
+	transition-delay: .5s;
+}
+div.experience div.box:hover h3{
+	opacity: 1;
+}
+div.experience a{
+	color: gold;
+	margin-right: 0;
+}
+div.box div.border_top{
+	position: absolute;
+	width: 100%;
+	height: 10px;
+	background-color: gold;
+	top: 0;
+	left: 0;
+	transform: scale(0, 1);
+	transition-duration: .5s; 
+}
+div.box div.border_bottom{
+	position: absolute;
+	width: 100%;
+	height: 10px;
+	background-color: gold;
+	right:  0;
+	bottom:  0;
+	transform: scale(0, 1);
+	transition-duration: .5s; 
+
+}
+div.box div.border_left{
+	position: absolute;
+	width: 10px;
+	height: 100%;
+	background:gold;
+	top: 0;
+	left: 0;
+	transform: scale(1,0);
+	transition-duration: .5s;
+}
+div.box div.border_right{
+	position: absolute;
+	width: 10px;
+	height: 100%;
+	background-color: gold;
+	right: 0;
+	bottom: 0;
+	transform: scale(1,0);
+
+}
+
+div.box:hover div.border_top,div.box:hover div.border_bottom,
+div.box:hover div.border_left,div.box:hover div.border_right{
+	transform: scale(1);
+}
+div.experience div.box div.black{
+	position: absolute;
+	background-color: black;
+	opacity: 0;
+	left: 10px;
+	right: 10px;
+	top: 10px;
+	bottom:10px;
+	transition-duration: .5s;
+
+}
+div.experience div.box:hover div.black{
+	opacity: 0.5;
+}
+div.what div.box3,div.contacts div.box3{
+	width: 33%;
+	float: left;
+	text-align: center;
+
+}
+div.what p,div.contacts p{
+	text-align: center;
+	color: grey;
+	text-transform: uppercase;
+}
+div.what div.circle,div.contacts div.circle{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: 2px solid gold;
+	background: url(../img/circle1.png);
+	margin: auto;
+}
+
+div.what div.circle:hover,div.contacts div.circle:hover{
+	background-position: right;
+}
+div.message div.left,div.message div.right{
+	width: 30%;
+	margin: 0 10%;
+	float: left;
+	padding-bottom: 50px;
+}
+div.message div.right{
+	float: right;
+}
+div.message p{
+	color: black;
+}
+div.message div.button{
+	clear: both;
+	margin-left: 10%;
+	width: 200px;
+	height: 75px;
+	border: 3px solid gold;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+}
+div.message div.button span{
+	top: 25px;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	display: block;
+	color: gold;
+}
+div.message div.button::before{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: black;
+	transform: skew(45deg) scale(0, 1);
+	transition-duration: .5s; 
+}
+div.message div.button:hover::before{
+	transform: skew(45deg) scale(1);
+}
+div.message input, div.mesage textarea{
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid black;
+	color: gray;
+	text-transform: uppercase;
+	font-size: .9em;
+}
+div.message textarea{
+	height: 75px;
+}
+
+@media screen and (max-width: 1180px){
+	div.what p,div.contacts p,div.about p{
+		font-size: .8em;
+	}
+
+	div.contacts a{
+		font-size: .7em;
+	}
+
+	div.experience div.box h3{
+		top: 20%;
+	}
+
+}
+
+@media screen and (max-width: 960px){
+	div.about img{
+		width: 40%;
+		margin: 0 5%;
+		margin-bottom: 50px;
+	}
+
+	div.about, div.experience, div.what, div.message{
+		padding: 100px 5%;
+	}
+	div.about p{
+		margin: 0 5%;
+	}
+
+	div.experience div.box{
+		width: 95%;
+		margin: 0 auto 50px;
+
+	}
+
+	div.experience div.box h3{
+		position: static;
+		opacity: 1;
+		color: black;
+	}
+
+	div.experience div.box div[class^="border"]{
+		display: none;
+	}
+
+	div.experience div.black{
+		display: none;
+	}
+
+
+	div.message div.left,div.message div.right{
+		width: 50%;
+		margin: 0 5%;
+		float: none;
+		padding-bottom: 50px;
+	}
+
+
+	div.message div.button{
+		margin-left: 5%;
+	}
+
+
+	div.what p,div.contacts p{
+		font-size: .7em;
+	}
+
+	div.contacts a{
+		font-size: .7em;
+	}
+
+	div.what div.box3{
+		width: 50%;
+	}
+	div.message div.button::before{
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 621px){
+	div.contacts div.box3{
+		width: 100%;
+	}
+
+	div.about img{
+		width: 90%;
+		margin: 0 5%;
+		margin-bottom: 50px;
+	}
+
+}
+
+
+@media screen and (max-width: 459px){
+		div.what div.box3{
+		width: 100%;
+	}
+
+}
+
+
+
+
+
+
+
+
